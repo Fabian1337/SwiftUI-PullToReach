@@ -10,7 +10,7 @@ import Combine
 import Foundation
 
 @available(iOS 13.0, *)
-public class PullToReachModel:ObservableObject {
+open class PullToReachModel:ObservableObject {
     @Published var offset: CGPoint
     @Published var isActive: Bool
     @Published var show: Bool
