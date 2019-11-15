@@ -10,7 +10,7 @@ import Combine
 import Foundation
 
 @available(iOS 13.0, *)
-open class PullToReachModel:ObservableObject {
+public class PullToReachModel:ObservableObject {
     @Published var offset: CGPoint
     @Published var isActive: Bool
     @Published var show: Bool
@@ -24,7 +24,7 @@ open class PullToReachModel:ObservableObject {
     @Published var counter: Int
     
     
-    init(offset: CGPoint, isActive: Bool, show: Bool) {
+    public init(offset: CGPoint, isActive: Bool, show: Bool) {
         self.offset = offset
         self.isActive = isActive
         self.show = show
