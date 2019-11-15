@@ -36,8 +36,8 @@ public struct PullToReach: View {
     public init(model: PullToReachModel, geometry: GeometryProxy) {
         self.geometry = geometry
         self.model = model
-        self.initialOffset = nil
         self.maxOffset = .zero
+        self.initialOffset = nil
         self.timerHold = Date()
         self.counter = 0
         self.printF = "eee"
