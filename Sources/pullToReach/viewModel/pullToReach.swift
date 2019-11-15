@@ -26,13 +26,13 @@ public struct PullToReach: View {
     @State private var timerHold: Date
     
     
-    @State private var counter
+    @State private var counter: Int
     
     
 //    var queue: DispatchQueue
 //    var source: PassthroughSubject<Int, Never>
     
-    @State var printF
+    @State var printF: String
     public init(model: PullToReachModel) {
         self.model = model
         self.initialOffset = nil
