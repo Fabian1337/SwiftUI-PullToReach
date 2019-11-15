@@ -20,24 +20,24 @@ public struct PullToReach: View {
     @State private var initialOffset: CGPoint?
     
     /// The offset of the scrollview updated as the scroll view scrolls
-    @State private var maxOffset: CGPoint
+    @State private var maxOffset: CGPoint?
     
     /// The time
-    @State private var timerHold: Date
+    @State private var timerHold: Date?
     
     
-    @State private var counter: Int
+    @State private var counter: Int?
     
     
 //    var queue: DispatchQueue
 //    var source: PassthroughSubject<Int, Never>
     
-    @State var printF: String
+    @State var printF: String?
     public init(model: PullToReachModel, geometry: GeometryProxy) {
         self.geometry = geometry
         self.model = model
         self.maxOffset = .zero
-        self.initialOffset = nil
+        self.initialOffset = .zero
         self.timerHold = Date()
         self.counter = 0
         self.printF = "eee"
