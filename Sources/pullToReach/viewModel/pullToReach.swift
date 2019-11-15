@@ -10,7 +10,7 @@ import Combine
 import Foundation
 
 @available(iOS 13.0, *)
-public struct PullToReach: View {
+public class PullToReach: View {
     var geometry: GeometryProxy
     
     /// load model (shard objects)
