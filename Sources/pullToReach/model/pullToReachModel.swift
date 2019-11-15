@@ -11,17 +11,17 @@ import Foundation
 
 @available(iOS 13.0, *)
 public class PullToReachModel:ObservableObject {
-    @Published var offset: CGPoint
-    @Published var isActive: Bool
-    @Published var show: Bool
-    @Published var timer = Timer.TimerPublisher(interval: 1, runLoop: .main, mode: .common).autoconnect()
-    @Published var time: Date = Date()
+    @Published public var offset: CGPoint
+    @Published public var isActive: Bool
+    @Published public var show: Bool
+    @Published public var timer = Timer.TimerPublisher(interval: 1, runLoop: .main, mode: .common).autoconnect()
+    @Published public var time: Date = Date()
     
     var queue: DispatchQueue
     var source: PassthroughSubject<Int, Never>
 //    var subscription: AnyCancellable
 //    var cancellable: Cancellable
-    @Published var counter: Int
+    @Published public var counter: Int
     
     
     public init(offset: CGPoint, isActive: Bool, show: Bool) {
