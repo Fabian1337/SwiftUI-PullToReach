@@ -10,31 +10,39 @@ import Combine
 import Foundation
 
 @available(iOS 13.0, *)
-public class PullToReach: View {
+public struct PullToReach: View {
     var geometry: GeometryProxy
     
     /// load model (shard objects)
     @ObservedObject var model: PullToReachModel
     
     /// The initial offset in the global frame, used for calculating the relative offset
-    @State private var initialOffset: CGPoint? = nil
+    @State private var initialOffset: CGPoint?
     
     /// The offset of the scrollview updated as the scroll view scrolls
-    @State private var maxOffset: CGPoint = .zero
+    @State private var maxOffset: CGPoint
     
     /// The time
-    @State private var timerHold: Date = Date()
+    @State private var timerHold: Date
     
     
-    @State private var counter = 0
+    @State private var counter
     
     
 //    var queue: DispatchQueue
 //    var source: PassthroughSubject<Int, Never>
     
-    @State var printF = "eee"
+    @State var printF
+    public init(model: PullToReachModel) {
+        self.model = model
+        self.initialOffset = nil
+        self.maxOffset = .zero
+        self.timerHold = Date()
+        self.counter = 0
+        self.printF = "eee"
+    }
     
-    var body: some View {
+    public var body: some View {
         VStack() {
             Run {
                 let globalOrigin = self.geometry.frame(in: .global).origin
