@@ -23,7 +23,7 @@ struct pullToReachExample: View {
                     if index == 1 {
                         VStack() {
                             GeometryReader { geometry in
-                                PullToReach(geometry: geometry, model: self.pullToReach)
+                                PullToReach(model: self.pullToReach, geometry: geometry)
 
                             }
     //                                    .frame(width: 0, height: 0)
