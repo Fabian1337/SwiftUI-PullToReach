@@ -33,7 +33,8 @@ public struct PullToReach: View {
 //    var source: PassthroughSubject<Int, Never>
     
     @State var printF: String
-    public init(model: PullToReachModel) {
+    public init(model: PullToReachModel, geometry: GeometryProxy) {
+        self.geometry = geometry
         self.model = model
         self.initialOffset = nil
         self.maxOffset = .zero
