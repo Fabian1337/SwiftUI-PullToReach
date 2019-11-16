@@ -23,7 +23,7 @@ public struct PullToReach: View {
     @State private var maxOffset: CGPoint?
     
     /// The time
-    @State private var timerHold: Date?
+    @State private var timerHold: Date = Date()
     
     
     @State private var counter: Int?
@@ -65,7 +65,7 @@ public struct PullToReach: View {
                     self.model.isActive = false
                 }
 
-                if round(self.model.time.distance(to: self.timerHold!)) <= -2 && self.model.offset.y >= 50 {
+                if round(self.model.time.distance(to: self.timerHold)) <= -2 && self.model.offset.y >= 50 {
                     self.model.isActive = true
                 }
 
@@ -73,7 +73,7 @@ public struct PullToReach: View {
                     self.timerHold = self.model.time
                 }
 
-                if self.model.isActive == true && round(self.model.time.distance(to: self.timerHold!)) <= -1 && self.model.offset.y <= 0.4 {
+                if self.model.isActive == true && round(self.model.time.distance(to: self.timerHold)) <= -1 && self.model.offset.y <= 0.4 {
                     self.model.isActive = false
                     self.model.show = true
                 }
