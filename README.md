@@ -1,5 +1,7 @@
 # pullToReach
 
+**Do not use! It's bad code !**
+
 My approach to create a pull to reach navigation for swiftUI!
 
 I created this to see how far I can push swiftUI and if it is possible to get "pull to reach" working. In general it is possible however the user experience is poor and the code also.
